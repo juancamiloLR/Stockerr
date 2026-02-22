@@ -8,7 +8,7 @@ Con él, el dueño de la tienda puede registrar sus productos con código de bar
 
 El sistema está pensado para crecer junto con el negocio: su arquitectura modular permite incorporar en el futuro módulos de ventas, facturación electrónica o analítica, sin necesidad de reescribir la solución desde cero.
 
-# Funcionalidades
+## Funcionalidades
 
 # Gestión de Productos
 
