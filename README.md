@@ -4,29 +4,35 @@ Las tiendas de barrio gestionan su inventario de forma manual o con hojas de cá
 Con él, el dueño de la tienda puede registrar sus productos con código de barras, controlar las entradas y salidas de mercancía, recibir alertas cuando un producto está por agotarse o por vencer, y consultar reportes básicos de costos y balances. Los empleados, por su parte, pueden registrar movimientos del día a día sin tener acceso a funciones administrativas sensibles.
 El sistema está pensado para crecer junto con el negocio: su arquitectura modular permite incorporar en el futuro módulos de ventas, facturación electrónica o analítica, sin necesidad de reescribir la solución desde cero.
 Funcionalidades
+
 📦 Gestión de Productos
 Registro de productos con campos: código de barras (estándar GS1), nombre, categoría, precio de compra, precio de venta, stock inicial, stock mínimo y fecha de vencimiento (opcional para perecederos).
 Modificación de datos del producto (excepto el código de barras una vez registrado).
 Eliminación lógica de productos: los productos se marcan como inactivos conservando el historial de movimientos.
 Listado paginado (máx. 20 por página) con ordenamiento por nombre, precio y stock.
 Búsqueda por nombre (parcial), categoría (filtro desplegable) y código de barras (exacta), con posibilidad de combinar criterios.
+
 🔄 Control de Movimientos de Inventario
 Registro de entradas de mercancía con referencia opcional (ej. número de factura).
 Registro de salidas de inventario con tipo de salida y nota de referencia.
 Historial detallado de todos los movimientos por producto.
 Actualización automática del stock tras cada movimiento registrado.
+
 📷 Escáner de Código de Barras
 Integración con dispositivos de lectura compatibles con el estándar GS1.
 Búsqueda y registro de productos directamente desde el escáner.
+
 📊 Reportes
 Reporte de costos del inventario actual.
 Reporte de stock disponible por producto y categoría.
 Reporte de balances (diferencia precio compra / venta).
 Listado de productos próximos a vencer.
+
 👥 Gestión de Usuarios y Acceso
 Autenticación con usuario y contraseña.
 Dos roles: Administrador (dueño) y Operador (empleado).
 Gestión de usuarios por parte del Administrador (crear, modificar, deshabilitar operadores).
+
 🗂️ Gestión de Categorías y Proveedores
 CRUD de categorías de productos.
 Registro y gestión de proveedores asociados a los productos.
