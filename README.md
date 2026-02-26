@@ -66,7 +66,7 @@ Registro y gestión de proveedores asociados a los productos.
 
 El sistema está construido sobre un patrón Cliente-Servidor en el que el frontend y el backend son independientes que se comunican exclusivamente a través de una API REST. Esto significa que la interfaz visual (lo que ve el usuario) está completamente separada de la lógica del negocio y los datos, lo que facilita el mantenimiento, las pruebas y futuras integraciones.
 
-Cliente (React)  →  API REST (Node.js + Express)  →  Base de Datos (MongoDB)
+Cliente (React)  →  API REST (Node.js + Express)  →  Base de Datos (PostgreSQL)
 
 # Tecnologías usadas
 
@@ -81,7 +81,7 @@ Node.js + Express: Expone la API REST, aplica las reglas de negocio, gestiona la
 
 ## Base de datos
 
-MongoDB (NoSQL): Persiste los documentos de productos, movimientos, usuarios, categorías y proveedores.
+PostgreSQL: Persiste los documentos de productos, movimientos, usuarios, categorías y proveedores.
 
 
 # Instalación del entorno
@@ -90,7 +90,7 @@ MongoDB (NoSQL): Persiste los documentos de productos, movimientos, usuarios, ca
 
 Para poder instalar y ejecutar el proyecto es necesario tener Node.js en su versión 18, disponible en nodejs.org. Esta instalación incluye npm automáticamente, que es el gestor de paquetes que se usa para instalar las dependencias tanto del frontend como del backend.
 
-Para la base de datos se requiere MongoDB Atlas. Como alternativa, es posible usar MongoDB Community server, que se puede instalar localmente desde mongodb.com.
+Para la base de datos se requiere PostgreSQL.
 
 El proyecto también requiere Git para clonar el repositorio, descargable desde git-scm.com. En cuanto al editor de código, se recomienda usar Visual Studio Code. Para el despliegue y la ejecución del entorno de desarrollo se utiliza Docker, que permite correr todos los servicios del proyecto de forma consistente sin necesidad de configuraciones adicionales en cada máquina; está disponible en docker.com.
 
@@ -108,6 +108,6 @@ Esto creará automáticamente una carpeta con el nombre del repositorio en el di
 Una vez clonado el repositorio, se abre Visual Studio Code y desde el menú superior se selecciona "File" y luego "Open Folder" para abrir la carpeta del proyecto. Con el proyecto abierto, se accede a la terminal integrada de Visual Studio Code desde el menú "Terminal" seleccionando "New Terminal", lo que abrirá una consola directamente en la raíz del proyecto.
 
 Desde esa terminal se instalan las dependencias del proyecto ejecutando npm install, lo cual descargará todos los paquetes necesarios definidos en el archivo package.json. Este paso solo es necesario la primera vez o cuando se agreguen nuevas dependencias al proyecto.
-Antes de iniciar la aplicación, es necesario crear un archivo .env en la raíz del proyecto con las variables de entorno correspondientes, como la cadena de conexión a MongoDB Atlas y el puerto del servidor.
+Antes de iniciar la aplicación, es necesario crear un archivo .env en la raíz del proyecto con las variables de entorno correspondientes, como la cadena de conexión a PostgreSQL y el puerto del servidor.
 
 Finalmente, para iniciar el proyecto se ejecuta npm run dev si se está en modo desarrollo, o npm start para correrlo en modo producción. También basta con ejecutar docker compose up y este se encargará de levantar todos los servicios automáticamente.
