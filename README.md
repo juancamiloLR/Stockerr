@@ -65,6 +65,40 @@ Registro y gestión de proveedores asociados a los productos.
 # Arquitectura
 
 El sistema está construido sobre un patrón Cliente-Servidor en el que el frontend y el backend son independientes que se comunican exclusivamente a través de una API REST. Esto significa que la interfaz visual (lo que ve el usuario) está completamente separada de la lógica del negocio y los datos, lo que facilita el mantenimiento, las pruebas y futuras integraciones.
+El sistema está construido bajo una arquitectura de microservicios, en la que la aplicación se divide en múltiples servicios independientes, cada uno encargado de una funcionalidad específica del negocio.
+
+El frontend y los microservicios se comunican a través de APIs REST, permitiendo que cada servicio opere, se despliegue y escale de manera autónoma.
+
+La interfaz visual (lo que ve el usuario) está desacoplada de la lógica de negocio y de la gestión de datos. Además, cada microservicio puede tener su propia base de datos, lo que mejora la escalabilidad, la resiliencia y la mantenibilidad del sistema.
+
+Esta arquitectura facilita:
+
+Escalamiento independiente por servicio.
+
+Despliegues sin afectar todo el sistema.
+
+Mayor tolerancia a fallos.
+
+Integración sencilla con otros sistemas.
+
+
+Estructura Arquitectónica
+
+Cliente (React)
+↓
+API Gateway
+↓
+Microservicios (Node.js + Express)
+
+Servicio de Usuarios
+
+Servicio de Productos
+
+Servicio de Inventario
+
+Servicio de Autenticación
+↓
+Base de Datos independiente por servicio (PostgreSQL)
 
 Cliente (React)  →  API REST (Node.js + Express)  →  Base de Datos (PostgreSQL)
 
